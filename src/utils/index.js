@@ -89,7 +89,7 @@ export function entitiestoUtf16(str) {
 export function transformObjectString(obj) {
     if (getType(obj) === 'object') {
         let transObj = {};
-        Object.keys(obj).forEach((el, index) => {
+        Object.keys(obj).forEach((el) => {
             transObj[el] = encodeURIComponent(obj[el]);
         });
         return transObj;
@@ -188,7 +188,7 @@ export function dateFormat(date, format) {
  * @params:{Number} maxWidth: the measure text maxWidth
  * @return: {Array} row: the measure text Array
  **/
-export function measureCanvasFont(text, maxWidth, fontSize) {
+export function measureCanvasWeb(text, maxWidth, fontSize) {
     let measureCanvas = document.createElement("canvas");
     let measureCtx = measureCanvas.getContext("2d");
     if (!text) {
